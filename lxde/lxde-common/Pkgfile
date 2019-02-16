@@ -17,7 +17,7 @@ build() {
 cd $name-$version
 
 # NuTyX Background
-sed -i "s@lxde/wallpapers/lxde_blue.jpg@backgrounds/nutyx/nutyx.jpg@" \
+sed -i "s@lxde/wallpapers/lxde_blue.jpg@backgrounds/yaolinux/wallpaper1.jpg@" \
 pcmanfm/pcmanfm.conf.in
 
 ./configure --prefix=/usr \
