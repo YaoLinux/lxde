@@ -8,7 +8,7 @@ contributors="geantbrun, tnut"
 name=lxde-panel
 alias=(lxpanel)
 _name=lxpanel
-version=0.9.3
+version=0.10.0
 release=1
 
 source=(http://downloads.sourceforge.net/lxde/files/${_name}-$version.tar.xz)
