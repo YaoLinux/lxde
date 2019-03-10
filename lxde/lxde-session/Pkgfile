@@ -8,7 +8,7 @@ packager="greg<greg@nutyx.org>"
 name=lxde-session
 alias=(lxsession)
 _name=lxsession
-version=0.5.3
+version=0.5.4
 release=1
 
 source=(http://downloads.sourceforge.net/lxde/${_name}-$version.tar.xz
