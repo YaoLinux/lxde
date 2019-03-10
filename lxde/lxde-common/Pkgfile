@@ -11,12 +11,12 @@ version=0.99.2
 release=4
 
 source=(http://downloads.sourceforge.net/lxde/$name-$version.tar.xz
-	icon-sekong.png)
+	)
 
 build() {
 cd $name-$version
 
-# NuTyX Background
+# Yaolx Background
 sed -i "s@lxde/wallpapers/lxde_blue.jpg@backgrounds/yaolinux/wallpaper1.jpg@" \
 pcmanfm/pcmanfm.conf.in
 
@@ -24,10 +24,5 @@ pcmanfm/pcmanfm.conf.in
 	--sysconfdir=/etc
 make
 make DESTDIR=$PKG install
-
-cp ../icon-sekong.png \
-$PKG/usr/share/lxde/images/lxde-icon.png
-cp ../icon-sekong.png \
-$PKG/usr/share/lxde/images/logout-banner.png
 
 }
