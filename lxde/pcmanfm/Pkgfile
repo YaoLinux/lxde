@@ -1,29 +1,30 @@
-# Depends on: libfm lxde-menu-data intltool
+makedepends=(libfm lxde-menu-data intltool)
 
 description="Extremely fast and lightweight file manager"
 url="http://lxde.org/"
-packager="tnut <tnut@nutyx.org>"
-contributors="tnut, Greg"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=pcmanfm
 version=1.3.1
 release=2
 
-source=(https://downloads.sourceforge.net/$name/$name-$version.tar.xz
-		)
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.xz)
 
 build() {
 
 	cd $name-$version
-	./configure --sysconfdir=/etc --prefix=/usr --with-gtk=3
+
+	./configure --sysconfdir=/etc \
+                --prefix=/usr \
+                --with-gtk=3
+
 	make
-
-	}
-
+}
 
 package() {
 
 	cd $name-$version
 	make DESTDIR=$PKG install
-
-    }
+}

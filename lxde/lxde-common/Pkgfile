@@ -1,28 +1,29 @@
-# Depends on: desktop-file-utils,gtk2,hicolor-icon-theme,lxde-icon-theme,lxde-panel,lxde-session,openbox,pcmanfm,shared-mime-info
+makedepends=(desktop-file-utils,gtk2,hicolor-icon-theme,lxde-icon-theme,lxde-panel,lxde-session,openbox,pcmanfm,shared-mime-info)
 
-url="http://lxde.org/about.html"
-maintainer="Copyright (C) 2001 Owen Taylor, Matthias Clasen, Red Hat, Inc."
-packager="Tnut <tnut@nutyx.org>"
-contributors="Geantbrun"
 description="provides a set of default configuration for LXDE"
+url="http://lxde.org/about.html"
+
+packager="Yaolinux Team"
+maintainer="rems"
+
 run=(lxde-icon-theme menu-cache lxde-menu-data lxde-panel lxde-session openbox pcmanfm )
+
 name=lxde-common
 version=0.99.2
 release=4
 
-source=(http://downloads.sourceforge.net/lxde/$name-$version.tar.xz
-	)
+source=(http://downloads.sourceforge.net/lxde/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
 
-# Yaolx Background
+# Yaolinux Background
 sed -i "s@lxde/wallpapers/lxde_blue.jpg@backgrounds/yaolinux/wallpaper1.jpg@" \
 pcmanfm/pcmanfm.conf.in
 
 ./configure --prefix=/usr \
-	--sysconfdir=/etc
+            --sysconfdir=/etc
+
 make
 make DESTDIR=$PKG install
-
 }
