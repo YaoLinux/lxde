@@ -1,4 +1,4 @@
-makedepends=(intltool vte)
+makedepends=(intltool vte3)
 
 description="Terminal emulator without any unnecessary dependencies"
 maintainer="rems"
