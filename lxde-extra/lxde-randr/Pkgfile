@@ -1,25 +1,27 @@
-# Depends on: gtk3 xorg-libxrandr
+makedepends=(gtk3 xorg-libxrandr)
 
 description="Monitors config tool for lxde"
 url="http://lxde.org/"
-contributors="geantbrun"
-packager="greg <greg@nutyx.org>"
+
+maintainer="rems"
+packager="Yaolinux Team"
 
 name=lxde-randr
 alias=(lxrandr)
 _name=lxrandr
 version=0.3.2
-release=1
 
 source=(http://downloads.sourceforge.net/lxde/${_name}-$version.tar.xz)
 		
 build() {
 cp -r $_name-$version gtk3
+
 cd gtk3
+
 ./configure --sysconfdir=/etc \
-	--prefix=/usr \
-	--enable-gtk3
+            --prefix=/usr \
+            --enable-gtk3
+
 make
 make DESTDIR=$PKG install
-	
 }
