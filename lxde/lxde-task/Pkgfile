@@ -9,7 +9,7 @@ packager="Yaolinux Team"
 name=lxde-task
 alias=(lxtask)
 _name=lxtask
-version=0.1.8
+version=0.1.10
 
 source=(https://downloads.sourceforge.net/lxde/${_name}-$version.tar.xz)
 
