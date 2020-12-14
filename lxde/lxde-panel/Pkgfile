@@ -1,4 +1,4 @@
-makedepends=(gtk3 menu-cache alsa-lib libwnck wireless-tools keybinder3 libfm lxde-menu-data)
+makedepends=(gtk3 gdk-pixbuf-xlib menu-cache alsa-lib libwnck3 wireless-tools keybinder3 libfm lxde-menu-data)
 
 description="Ccontains a lightweight X11 desktop panel"
 url="http://lxde.org/"
@@ -19,7 +19,6 @@ prepare() {
   
   sed -i '/pager.c/d' plugins/Makefile.am
   sed -i '/STATIC_PAGER/d' src/private.h
-  sed -i 's/libwnck-3.0//' configure.ac
   
   autoreconf -fi
 }
